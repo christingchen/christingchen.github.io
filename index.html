@@ -1,26 +1,105 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>My First Website</title>
-</head>
-<body>
-    <h1>TINGCHEN</h1>
-    <h2>An HTML Playground</h2>
-    <h3>An HTML Playground</h3>
-    <h4>An HTML Playground</h4>
-    <h5>An HTML Playground</h5>
-    <h6>An HTML Playground</h6>
+import { motion } from "framer-motion";
+import { Mail, FileText, FolderOpen, User } from "lucide-react";
 
-    Welcome to my portfolio. I'm <b>Christine Chen!</b>
-    <p> tee hee hello christine allison was here</p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-white text-gray-900 font-sans">
+      {/* NAV */}
+      <header className="flex justify-between items-center px-8 py-6 border-b">
+        <h1 className="text-xl font-semibold tracking-tight">Christine Chen</h1>
+        <nav className="space-x-6 text-sm">
+          <a href="#about">About</a>
+          <a href="#resume">Resume</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-</body>
-</html>
+      {/* HERO */}
+      <section className="px-8 py-24 max-w-4xl mx-auto text-center">
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-4xl font-light"
+        >
+          Industrial Designer crafting thoughtful, minimal experiences.
+        </motion.h2>
+        <p className="mt-6 text-gray-600">
+          I design products that balance form, function, and human behavior.
+        </p>
+      </section>
+
+      {/* ABOUT */}
+      <section id="about" className="px-8 py-20 max-w-4xl mx-auto">
+        <div className="flex items-center gap-3 mb-4">
+          <User size={18} />
+          <h3 className="text-2xl font-medium">About</h3>
+        </div>
+        <p className="text-gray-600 leading-relaxed">
+          I am Christine Chen, an industrial designer focused on creating minimal,
+          human-centered products. My work blends research, sketching, and
+          prototyping to transform ideas into meaningful physical and digital
+          experiences.
+        </p>
+      </section>
+
+      {/* RESUME */}
+      <section id="resume" className="px-8 py-20 max-w-4xl mx-auto border-t">
+        <div className="flex items-center gap-3 mb-6">
+          <FileText size={18} />
+          <h3 className="text-2xl font-medium">Resume</h3>
+        </div>
+        <div className="text-gray-600 space-y-2">
+          <p><strong>Education:</strong> Industrial Design (BFA)</p>
+          <p><strong>Experience:</strong> Product / UX / Physical Design Projects</p>
+          <p><strong>Skills:</strong> Sketching, Figma, SolidWorks, Prototyping</p>
+          <a className="text-black underline" href="#">
+            Download Full Resume
+          </a>
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section id="projects" className="px-8 py-20 max-w-4xl mx-auto border-t">
+        <div className="flex items-center gap-3 mb-6">
+          <FolderOpen size={18} />
+          <h3 className="text-2xl font-medium">Projects</h3>
+        </div>
+
+        <div className="grid gap-6">
+          <div className="p-6 border rounded-xl">
+            <h4 className="font-medium">Minimal Desk Lamp</h4>
+            <p className="text-gray-600 text-sm mt-2">
+              A study in warm lighting and tactile interaction for modern workspaces.
+            </p>
+          </div>
+
+          <div className="p-6 border rounded-xl">
+            <h4 className="font-medium">Modular Kitchen Tool System</h4>
+            <p className="text-gray-600 text-sm mt-2">
+              A flexible cooking system designed for small urban spaces.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" className="px-8 py-20 max-w-4xl mx-auto border-t">
+        <div className="flex items-center gap-3 mb-4">
+          <Mail size={18} />
+          <h3 className="text-2xl font-medium">Contact</h3>
+        </div>
+        <p className="text-gray-600">
+          Email: christine@example.com
+        </p>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="px-8 py-10 text-center text-xs text-gray-400">
+        © {new Date().getFullYear()} Christine Chen. All rights reserved.
+      </footer>
+    </div>
+  );
+}
+
 
