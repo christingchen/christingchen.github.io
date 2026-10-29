@@ -1,105 +1,197 @@
-import { motion } from "framer-motion";
-import { Mail, FileText, FolderOpen, User } from "lucide-react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Christine Chen — Industrial Designer creating thoughtful, human-centered products.">
+  <title>Christine Chen | Industrial Designer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-export default function Portfolio() {
-  return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans">
-      {/* NAV */}
-      <header className="flex justify-between items-center px-8 py-6 border-b">
-        <h1 className="text-xl font-semibold tracking-tight">Christine Chen</h1>
-        <nav className="space-x-6 text-sm">
-          <a href="#about">About</a>
-          <a href="#resume">Resume</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
+  <header class="navbar">
+    <a class="logo" href="#home">CC.</a>
 
-      {/* HERO */}
-      <section className="px-8 py-24 max-w-4xl mx-auto text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-4xl font-light"
-        >
-          Industrial Designer crafting thoughtful, minimal experiences.
-        </motion.h2>
-        <p className="mt-6 text-gray-600">
-          I design products that balance form, function, and human behavior.
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#resume">Resume</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <p class="eyebrow">PORTFOLIO · 2026</p>
+
+      <h1>
+        Christine<br>
+        <span>Chen.</span>
+      </h1>
+
+      <div class="hero-bottom">
+        <p class="hero-description">
+          Industrial designer exploring the intersection of
+          thoughtful form, everyday function, and human experience.
         </p>
-      </section>
 
-      {/* ABOUT */}
-      <section id="about" className="px-8 py-20 max-w-4xl mx-auto">
-        <div className="flex items-center gap-3 mb-4">
-          <User size={18} />
-          <h3 className="text-2xl font-medium">About</h3>
-        </div>
-        <p className="text-gray-600 leading-relaxed">
-          I am Christine Chen, an industrial designer focused on creating minimal,
-          human-centered products. My work blends research, sketching, and
-          prototyping to transform ideas into meaningful physical and digital
-          experiences.
-        </p>
-      </section>
+        <a class="text-link" href="#projects">EXPLORE MY WORK ↘</a>
+      </div>
 
-      {/* RESUME */}
-      <section id="resume" className="px-8 py-20 max-w-4xl mx-auto border-t">
-        <div className="flex items-center gap-3 mb-6">
-          <FileText size={18} />
-          <h3 className="text-2xl font-medium">Resume</h3>
-        </div>
-        <div className="text-gray-600 space-y-2">
-          <p><strong>Education:</strong> Industrial Design (BFA)</p>
-          <p><strong>Experience:</strong> Product / UX / Physical Design Projects</p>
-          <p><strong>Skills:</strong> Sketching, Figma, SolidWorks, Prototyping</p>
-          <a className="text-black underline" href="#">
-            Download Full Resume
-          </a>
-        </div>
-      </section>
+      <div class="hero-art" aria-label="Abstract geometric artwork">
+        <div class="art-circle"></div>
+        <div class="art-arch"></div>
+        <div class="art-block"></div>
+        <span class="art-label">FORM / FUNCTION / FEELING</span>
+      </div>
+    </section>
 
-      {/* PROJECTS */}
-      <section id="projects" className="px-8 py-20 max-w-4xl mx-auto border-t">
-        <div className="flex items-center gap-3 mb-6">
-          <FolderOpen size={18} />
-          <h3 className="text-2xl font-medium">Projects</h3>
-        </div>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <p class="eyebrow">01 — A LITTLE ABOUT ME</p>
 
-        <div className="grid gap-6">
-          <div className="p-6 border rounded-xl">
-            <h4 className="font-medium">Minimal Desk Lamp</h4>
-            <p className="text-gray-600 text-sm mt-2">
-              A study in warm lighting and tactile interaction for modern workspaces.
-            </p>
+      <div class="section-content">
+        <h2>Designing with<br>intention.</h2>
+
+        <div class="body-copy">
+          <p>
+            Hi, I'm Christine — an industrial designer interested in
+            how the objects around us shape the way we live, work,
+            and connect.
+          </p>
+
+          <p>
+            I believe good design feels effortless. My approach combines
+            curiosity, thoughtful research, material exploration, and
+            iterative making to create purposeful solutions.
+          </p>
+
+          <p class="note">
+            A practice rooted in curiosity, clarity, and care.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section class="section" id="resume">
+      <p class="eyebrow">02 — EXPERIENCE & EDUCATION</p>
+
+      <div class="section-content">
+        <h2>My background.</h2>
+
+        <div class="resume-list">
+          <div class="resume-item">
+            <span>EDUCATION</span>
+            <div>
+              <h3>Your Education</h3>
+              <p>Add your school, degree, and graduation year here.</p>
+            </div>
           </div>
 
-          <div className="p-6 border rounded-xl">
-            <h4 className="font-medium">Modular Kitchen Tool System</h4>
-            <p className="text-gray-600 text-sm mt-2">
-              A flexible cooking system designed for small urban spaces.
-            </p>
+          <div class="resume-item">
+            <span>EXPERIENCE</span>
+            <div>
+              <h3>Professional Experience</h3>
+              <p>Add your internships, roles, and relevant experience.</p>
+            </div>
           </div>
-        </div>
-      </section>
 
-      {/* CONTACT */}
-      <section id="contact" className="px-8 py-20 max-w-4xl mx-auto border-t">
-        <div className="flex items-center gap-3 mb-4">
-          <Mail size={18} />
-          <h3 className="text-2xl font-medium">Contact</h3>
+          <div class="resume-item">
+            <span>CAPABILITIES</span>
+            <div>
+              <h3>Design Skills</h3>
+              <p>Sketching · CAD · Prototyping · Research · Visualization</p>
+            </div>
+          </div>
+
+          <p class="resume-note">
+            These are placeholders. We'll replace them with your actual
+            background and add a downloadable resume later.
+          </p>
         </div>
-        <p className="text-gray-600">
-          Email: christine@example.com
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section projects" id="projects">
+      <p class="eyebrow">03 — SELECTED WORK</p>
+
+      <div class="projects-heading">
+        <h2>Things I've<br>been thinking about.</h2>
+        <p>
+          A selection of projects and explorations.
+          More details coming soon.
         </p>
-      </section>
+      </div>
 
-      {/* FOOTER */}
-      <footer className="px-8 py-10 text-center text-xs text-gray-400">
-        © {new Date().getFullYear()} Christine Chen. All rights reserved.
-      </footer>
-    </div>
-  );
-}
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-art art-01">
+            <span>01</span>
+            <div class="project-shape"></div>
+          </div>
+          <div class="project-meta">
+            <span>INDUSTRIAL DESIGN</span>
+            <span>↗</span>
+          </div>
+          <h3>Product Design</h3>
+          <p>Thoughtful objects designed around everyday rituals.</p>
+        </article>
 
+        <article class="project-card">
+          <div class="project-art art-02">
+            <span>02</span>
+            <div class="project-shape"></div>
+          </div>
+          <div class="project-meta">
+            <span>RESEARCH & EXPLORATION</span>
+            <span>↗</span>
+          </div>
+          <h3>Material Studies</h3>
+          <p>Exploring materials, textures, and the possibilities of form.</p>
+        </article>
 
+        <article class="project-card">
+          <div class="project-art art-03">
+            <span>03</span>
+            <div class="project-shape"></div>
+          </div>
+          <div class="project-meta">
+            <span>HUMAN-CENTERED DESIGN</span>
+            <span>↗</span>
+          </div>
+          <h3>Human Experiences</h3>
+          <p>Creating intuitive experiences through observation and iteration.</p>
+        </article>
+      </div>
+
+      <p class="project-note">
+        These are starter concepts, not descriptions of completed projects.
+        We'll replace them with your actual work and imagery.
+      </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <p class="eyebrow">04 — GET IN TOUCH</p>
+
+      <h2>Let's make<br>something meaningful.</h2>
+
+      <p>Have a project in mind or just want to connect?</p>
+
+      <a class="contact-link" href="mailto:YOUR_EMAIL@example.com">
+        YOUR_EMAIL@example.com ↗
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <span>CHRISTINE CHEN © 2026</span>
+    <a href="#home">BACK TO TOP ↑</a>
+    <span>DESIGNED WITH INTENTION.</span>
+  </footer>
+
+</body>
+</html>
